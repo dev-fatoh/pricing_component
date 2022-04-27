@@ -1,0 +1,180 @@
+@import url(https://fonts.google.com/specimen/Montserrat);
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 15px;
+}
+
+body {
+  width: 100%;
+  margin: 1rem;
+  font-family: "Montserrat", Arial, Sans-Serif;
+}
+
+.move {
+  transform: translateX(120%);
+}
+
+.theme {
+  background-color: hsl(232deg, 13%, 33%);
+}
+
+.active {
+  background-image: linear-gradient(hsl(236deg, 72%, 79%), hsl(237deg, 63%, 64%));
+}
+.active .card-header h1 {
+  color: #ced0d9;
+}
+.active .items {
+  color: #FFF;
+}
+.active .items .item-btn {
+  background: #FFF;
+  color: hsl(232deg, 13%, 33%);
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  padding: 1rem;
+  background-image: url("../images/bg-bottom.svg");
+  background-color: hsl(240deg, 78%, 98%);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+  /* card section*/
+}
+.container .header {
+  width: 100%;
+  padding: 1.2rem;
+  min-height: 20%;
+  margin-bottom: 3rem;
+}
+.container .header .title {
+  color: hsl(232deg, 13%, 33%);
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+.container .header .toggle-them {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+.container .header .toggle-them li h3 {
+  font-size: 1rem;
+}
+.container .header .toggle-them .annuually {
+  color: hsl(234deg, 14%, 74%);
+}
+.container .header .toggle-them .monthly {
+  color: hsl(234deg, 14%, 74%);
+}
+.container .header .toggle-them .btn {
+  width: 80px;
+  height: 40px;
+  position: relative;
+  background-image: linear-gradient(hsl(236deg, 72%, 79%), hsl(237deg, 63%, 64%));
+  border: 0;
+  border-radius: 20px;
+}
+.container .header .toggle-them .btn button {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 34px;
+  height: 34px;
+  border: 0;
+  background: #FFF;
+  border-radius: 50%;
+  z-index: 10;
+  transition: transform 1s ease;
+  cursor: pointer;
+}
+.container .cards {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.container .cards .card {
+  background: #FFF;
+  width: 95%;
+  height: 75%;
+  padding: 2rem;
+  margin: 1rem 0;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container .cards .card .card-header {
+  padding: 2rem;
+  height: 30%;
+  color: hsl(234deg, 14%, 74%);
+  text-align: center;
+}
+.container .cards .card .card-header p {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+.container .cards .card .card-header h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  padding: 2rem;
+}
+.container .cards .card .card-header h1 span {
+  font-size: 2.6rem;
+  margin-right: 0.6rem;
+}
+.container .cards .card .items {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  list-style: none;
+}
+.container .cards .card .items li:not(:last-child) {
+  width: 100%;
+  display: block;
+  padding: 1rem 0rem;
+  font-size: 1rem;
+  border-bottom: 1px solid #d2d2f9;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.container .cards .card .items .item-btn {
+  color: #FFF;
+  width: 100%;
+  padding: 1rem;
+  background-image: linear-gradient(hsl(236deg, 72%, 79%), hsl(237deg, 63%, 64%));
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.2rem;
+  border: 0;
+  border-radius: 3px;
+}
+.container .cards .active {
+  background-image: linear-gradient(hsl(236deg, 72%, 79%), hsl(237deg, 63%, 64%));
+  color: #FFF;
+}
+.container .cards .active .card-header p {
+  color: hsl(240deg, 78%, 98%);
+}
+.container .cards .active .items .item-btn {
+  background: #FFF;
+  color: hsl(232deg, 13%, 33%);
+}
+
+/*# sourceMappingURL=style.css.map */

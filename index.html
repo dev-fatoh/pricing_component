@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <title>Frontend Mentor | [Challenge Name Here]</title>
+    <link rel="stylesheet" href="main-style/style.css" type="text/css" />
+
+</head>
+<body>
+    <div class="container">
+        <!-- header section -->
+        <header class="header">
+            <h1 class="title">our pricing</h1>
+            <ul class="toggle-them">
+                <li class="annuually">
+                    <h3>annuually</h3>
+                </li>
+                <li class="btn"><button></button></li>
+                <li class="monthly">
+                    <h3>monthly</h3>
+                </li>
+            </ul>
+
+        </header>
+        <section class="cards">
+            <div class="card">
+                <div class="card-header">
+                    <p>
+                        Basic
+                    </p>
+                    <h1><span>$</span>199.99  </h1>
+
+                </div>
+                <ul class="items">
+                    <li>500 GB storage</li>
+                    <li>2 users allowed</li>
+                    <li>send up to 3 GB</li>
+                    <li class="item-btn">learn more</li>
+
+                </ul>
+
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <p>
+                        professional
+                    </p>
+                    <h1><span>$</span>249.99</h1>
+                </div>
+                <ul class="items">
+                    <li>1 TB storage</li>
+                    <li>5 users allowed</li>
+                    <li>send up to 10GB</li>
+                    <li class="item-btn">learn more</li>
+                </ul>
+
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <p>
+                        master
+                    </p>
+                    <h1><span>$</span>399.99</h1>
+
+                </div>
+
+                <ul class="items">
+                    <li>2 TB storage</li>
+                    <li>10 users allowed</li>
+                    <li>send up to 20GB</li>
+                    <li class="item-btn">learn more</li>
+                </ul>
+            </div>
+
+        </section>
+        <!--header section end -->
+
+    </div>
+
+
+
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">Your Name Here</a>.
+    </div>
+    <script type="text/javascript" charset="utf-8">
+        const btn=document.querySelector('.btn')
+        const backThem=document.querySelectorAll('.card')
+        console.log(backThem)
+        const afterBtn=document.querySelector('button')
+        console.log(afterBtn)
+        afterBtn.addEventListener('click',()=>{
+            afterBtn.classList.toggle('move')
+            backThem.forEach(item=>{
+                item.classList.toggle('active')
+            })
+            
+            
+        });
+    </script>
+</body>
+</html>

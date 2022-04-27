@@ -1,0 +1,51 @@
+$primary-color-gradient-1: hsl(236, 72%, 79%);
+$primary-color-gradient-2:hsl(237, 63%, 64%);
+$secondary-color-light: hsl(234, 14%, 74%);
+$secondary-color-verylight: hsl(240, 78%, 98%);
+$secondary-color-dark: hsl(232, 13%, 33%);
+$font-size-defult: 15px;
+@import url( https://fonts.google.com/specimen/Montserrat);
+@mixin flex ($direction,$justify) {
+    display: flex;
+    align-items: center;
+    flex-direction: $direction;
+    justify-content: $justify;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: $font-size-defult;
+}
+body {
+    width: 100%;
+    margin: 1rem;
+    font-family: 'Montserrat',Arial,Sans-Serif;
+
+
+}
+.move {
+    transform: translateX(120%);
+}
+.theme {
+    background-color: $secondary-color-dark;
+}
+.active {
+    background-image: linear-gradient($primary-color-gradient-1 ,$primary-color-gradient-2);
+
+    .card-header {
+        h1 {
+            color: lighten( $secondary-color-dark,50%);
+        }
+    }
+
+    .items {
+        color: #FFF;
+        .item-btn {
+            background: #FFF;
+            color: $secondary-color-dark;
+        }
+    }
+}

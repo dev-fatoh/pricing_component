@@ -1,0 +1,160 @@
+@import 'config';
+.container {
+    position: relative;
+    width: 100%;
+    padding: 1rem;
+    background-image: url('../images/bg-bottom.svg')  ;
+    background-color: $secondary-color-verylight;
+
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.4);
+
+    .header {
+        width: 100%;
+        padding: 1.2rem;
+        min-height: 20%;
+        margin-bottom: 3rem;
+        .title {
+            color: $secondary-color-dark;
+            font-size: 2rem;
+            text-transform: uppercase;
+            text-align: center;
+
+        }
+        .toggle-them {
+
+            list-style: none;
+            @include flex(row,space-around);
+            margin-top: 2rem;
+
+            li {
+
+                h3 {
+                    font-size: 1rem;
+                }
+            }
+            .annuually {
+                color: $secondary-color-light ;
+            }
+            .monthly {
+                color: $secondary-color-light;
+            }
+            .btn {
+                width: 80px;
+                height: 40px;
+                position: relative;
+                background-image: linear-gradient($primary-color-gradient-1 ,$primary-color-gradient-2);
+                border: 0;
+                border-radius: 20px;
+
+                button {
+                    
+                    position: absolute;
+                    top: 3px;
+                    left: 3px;
+                    width: 34px;
+                    height: 34px;
+                    border: 0;
+                    background: #FFF;
+                    border-radius: 50%;
+                    z-index: 10;
+                    transition: transform 1s ease;
+                    cursor: pointer;
+
+                    
+                }
+
+            }
+
+        }
+
+    }
+    
+    /* card section*/
+    .cards {
+        width: 100%;
+        @include flex(column,center);
+        max-width: 400px;
+        margin: 0 auto;
+        .card {
+            background: #FFF;
+            width: 95%;
+            height: 75%;
+            padding: 2rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+            box-shadow: 1px 1px 5px rgba(0,0,0,0.4);
+            @include flex(column,space-between);
+            .card-header {
+                padding: 2rem;
+                height: 30%;
+                      color: $secondary-color-light;
+                    text-align: center;
+                p {
+                    font-size: 1.4rem;
+                    font-weight: 400;
+              
+                }
+                h1 {
+                    font-size: 5rem;
+                    font-weight: 700
+                    ;
+            
+                    padding: 2rem;
+                    span {
+                        font-size: 2.6rem;
+                        margin-right: .6rem;
+                    }
+                }
+            }
+
+            .items {
+                @include flex(column,center);
+                width: 100%;
+
+                list-style: none;
+                li:not(:last-child) {
+                    width: 100%;
+
+                    display: block;
+                    padding: 1rem 0rem;
+                    font-size: 1rem;
+                    border-bottom: 1px solid darken($secondary-color-verylight,8);
+                    margin-bottom: 1rem;
+                    text-align: center;
+
+
+                }
+                .item-btn {
+                    color: #FFF;
+                    width: 100%;
+                    padding: 1rem;
+                    background-image: linear-gradient($primary-color-gradient-1 ,$primary-color-gradient-2);
+                    margin: 0 auto;
+                    text-align: center;
+                    font-size: 1.2rem;
+                    border: 0;
+                    border-radius: 3px;
+
+
+
+                }
+            }
+        }
+        .active {
+            background-image: linear-gradient($primary-color-gradient-1 ,$primary-color-gradient-2);
+            color: #FFF;
+            .card-header {
+                p {
+                    color: $secondary-color-verylight;
+                }
+            }
+
+            .items {
+                .item-btn {
+                    background: #FFF;
+                    color: $secondary-color-dark;
+                }
+            }
+        }
+    }
+}
